@@ -156,6 +156,9 @@ But you would get **the Error in browser**
 But we had install the plugin before the usage
 
 
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9554cdec345947e1a19a67f2e2060776~tplv-k3u1fbpfcp-watermark.image?)
+
+Because use the different plugin instance
 
 So we need to **set the webpack alias config**
 
