@@ -2,12 +2,20 @@
   "name": "el-input",
   "version": "0.1.0",
   "private": true,
-  "main": "dist/usd.umd.js",
+  "main": "./dist2/umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist2/umd.mjs",
+      "require": "./dist2/umd.js"
+    },
+    "./*": "./*"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "library": "vue-cli-service build --target lib --name usd ./src/index.js"
+    "library": "vue-cli-service build --target lib --name usd ./src/index.js",
+    "rollup": "rollup --config rollup.config.js"
   },
   "dependencies": {
     "@vue/composition-api": "^1.7.1",
@@ -20,8 +28,12 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "@vue/compiler-sfc": "2.7.14",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "rollup": "^3.17.0",
+    "rollup-plugin-styles": "^4.0.0",
+    "rollup-plugin-vue": "5.1.9",
     "vue-template-compiler": "2.6.14"
   },
   "eslintConfig": {
